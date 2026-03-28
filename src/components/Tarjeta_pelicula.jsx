@@ -1,3 +1,4 @@
+import "../css/Tarjeta_pelicula.css"
 
 function TarjetaPelicula({ pelicula }) {
 

@@ -1,0 +1,26 @@
+/* Favorites.css */
+.favoritos-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--clr-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--clr-border);
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: var(--shadow-md);
+}
+
+.favoritos-vacio h2 {
+  color: var(--clr-heading);
+  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+}
+
+.favoritos-vacio p {
+  color: var(--clr-text-muted);
+  font-size: var(--font-size-lg);
+}

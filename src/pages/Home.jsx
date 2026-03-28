@@ -1,3 +1,4 @@
+import "../css/Home.css"
 import TarjetaPelicula from "../components/Tarjeta_pelicula"
 import {useState} from "react"
 

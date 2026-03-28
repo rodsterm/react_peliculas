@@ -1,0 +1,65 @@
+/* Home.css */
+.home {
+  width: 100%;
+}
+
+.formulario-busqueda {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem;
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-busqueda {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-border);
+  background-color: var(--clr-surface);
+  color: var(--clr-text);
+  font-size: var(--font-size-lg);
+  outline: none;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.input-busqueda:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px var(--clr-primary-fade);
+  background-color: var(--clr-surface-2);
+}
+
+.boton-busqueda {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  bottom: 6px;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-full);
+  background: var(--grad-primary);
+  color: var(--clr-white);
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.boton-busqueda:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.grid-peliculas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .grid-peliculas {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+}

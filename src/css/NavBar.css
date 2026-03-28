@@ -1,0 +1,63 @@
+/* NavBar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--grad-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  transition: background-color var(--transition-base);
+}
+
+.navbar-marca a {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--clr-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-marca a:hover {
+  color: var(--clr-white);
+  text-shadow: var(--shadow-glow);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-size: var(--font-size-md);
+  color: var(--clr-text);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--clr-primary);
+  transition: width var(--transition-base);
+}
+
+.navbar-link:hover {
+  color: var(--clr-white);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}

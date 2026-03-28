@@ -1,0 +1,16 @@
+/* App.css */
+.contenido-principal {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: var(--navbar-height);
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .contenido-principal {
+    padding: 1rem;
+  }
+}
