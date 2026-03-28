@@ -1,17 +1,25 @@
 import "../css/Tarjeta_pelicula.css"
+import { useContextoPeliculas } from "../contexts/ContextoPeliculas"
 
 function TarjetaPelicula({ pelicula }) {
+    const { agregarFavorito, eliminarFavorito, esFavorito } = useContextoPeliculas();
+    const favorito = esFavorito(pelicula.id);
 
-    function agregarAFavoritos() {
-        alert(`Agregaste "${pelicula.titulo}" a tus favoritos!`);
+    function OnClickFavorito(e) {
+        e.preventDefault();
+        if (favorito) {
+            eliminarFavorito(pelicula.id);
+        } else {
+            agregarFavorito(pelicula);
+        }
     }
 
-    return <div className = "tarjeta-pelicula">
-        <div className = "poster-pelicula">
+    return <div className="tarjeta-pelicula">
+        <div className="poster-pelicula">
             <img src={pelicula.url} alt={pelicula.titulo} />
-            <div className = "overlay-pelicula">
-                <button className="favorito-btn" onClick={agregarAFavoritos}>
-                    ♡︎
+            <div className="overlay-pelicula">
+                <button className={`favorito-btn ${favorito ? "favorito" : ""}`} onClick={OnClickFavorito}>
+                    {favorito ? "❤️" : "❤︎"}
                 </button>
             </div>
         </div>

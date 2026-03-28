@@ -88,6 +88,14 @@
   box-shadow: var(--shadow-glow);
 }
 
+.favorito-btn.favorito {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  border-color: rgba(255, 77, 77, 0.4);
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .info-pelicula {
   padding: 1rem;
   background: var(--clr-surface);
