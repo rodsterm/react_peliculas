@@ -1,8 +1,6 @@
 import "../css/Favorites.css"
 import { useContextoPeliculas } from "../contexts/ContextoPeliculas"
 import TarjetaPelicula from "../components/Tarjeta_pelicula"
-import { useContextoPeliculas } from "../contexts/ContextoPeliculas"
-import MovieCard from "../components/Tarjeta_pelicula"
 
 function Favorites() {
     const { favoritos } = useContextoPeliculas();
